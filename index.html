@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Your <span>Personal Journey</span> Starts Here</h1>
+        <p>Join a proven fitness coach who helps you feel great, get strong, and live healthy.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn primary">Get Started</a>
+          <a href="#" class="btn secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="photos/nn.jpg" alt="Coach" style="width: 300px; height: auto;">
+      </div>
+    </div>
+  </section>
+  <!-- Services / Transformation Section -->
+<section class="services">
+  <h2>Unleash Your Potential <span>with My Guidance</span></h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Group Coaching">
+      <h3>Group Coaching</h3>
+      <p>Train with others and grow together with motivation and guidance.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600" alt="1-on-1 Training">
+      <h3>1-on-1 Training</h3>
+      <p>Personalized sessions tailored to your goals and progress speed.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://images.pexels.com/photos/3757957/pexels-photo-3757957.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nutrition Plan">
+      <h3>Nutrition Planning</h3>
+      <p>Healthy meals and routines to fuel your transformation journey.</p>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2>What My Clients Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>"I’ve never felt stronger! Her coaching changed my life in 3 months."</p>
+      <div class="stars">★★★★★</div>
+      <h4>- Sarah M.</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Professional, passionate, and motivating. Highly recommend to anyone."</p>
+      <div class="stars">★★★★★</div>
+      <h4>- Alex K.</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Customized plans that actually work. I lost 10kg without starving."</p>
+      <div class="stars">★★★★★</div>
+      <h4>- Maria R.</h4>
+    </div>
+  </div>
+</section>
+<!-- FAQ Section -->
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">How do I start my coaching journey?</button>
+      <div class="faq-answer">
+        <p>Simply fill out the contact form and I’ll get in touch to discuss your goals and set up your plan.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer virtual coaching?</button>
+      <div class="faq-answer">
+        <p>Yes! I offer both virtual and in-person sessions to suit your lifestyle and location.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I cancel anytime?</button>
+      <div class="faq-answer">
+        <p>You can cancel monthly plans anytime with a 7-day notice period. No hard feelings!</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // Scroll animation (already added before)
+  const revealElements = document.querySelectorAll(".reveal");
+  const revealOnScroll = () => {
+    revealElements.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const revealTop = el.getBoundingClientRect().top;
+      if (revealTop < windowHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  };
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+
+  // FAQ toggle
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      const answer = button.nextElementSibling;
+      answer.style.display = answer.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+<!-- Contact Section -->
+<section class="contact">
+  <h2>Start Your Journey Today</h2>
+  <p>Let’s get in touch and build your transformation plan.</p>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Personal Coach. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>
